@@ -1,6 +1,6 @@
 {
   "name": "Actron Que Wall Controller",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "new_install_prompt_erase": false,
   "builds": [
     {
