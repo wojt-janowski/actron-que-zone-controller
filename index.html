@@ -72,8 +72,9 @@
         This board has <strong>no auto-reset</strong> over its USB-serial writer, so you must put it in
         download mode <em>by hand before</em> clicking Install: hold the pin labelled
         <code>EN</code> (the silkscreen is swapped — it's really GPIO0) to GND, tap the
-        red <code>RESET</code> button, then release. Once it shows
-        “waiting for download”, click Install. If the browser can't sync, the CLI path
+        red <code>RESET</code> button, then release. <strong>The panel screen goes
+        black in download mode — that's expected, not a fault.</strong> Once it's in
+        download mode, click Install. If the browser can't sync, the CLI path
         (<code>esptool --before no-reset --after no-reset</code>) is the reliable fallback.
       </p>
       <esp-web-install-button manifest="wall-install.json">
