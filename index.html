@@ -38,7 +38,11 @@
     button[slot="activate"]:hover { filter: brightness(1.08); }
     [slot="unsupported"], [slot="not-allowed"] { color: #e3a008; font-size: 14px; }
     .note { color: var(--muted); font-size: 13px; margin-top: 28px; }
-    .note code { background: #0a0d11; padding: 1px 6px; border-radius: 5px; }
+    .warn {
+      color: #d8c08a; background: #221d10; border: 1px solid #3a311a;
+      border-radius: 9px; padding: 12px 14px; font-size: 13px; margin: 0 0 16px;
+    }
+    .note code, .warn code { background: #0a0d11; padding: 1px 6px; border-radius: 5px; }
     a { color: var(--accent); }
   </style>
 </head>
@@ -63,7 +67,15 @@
 
     <div class="card">
       <h2>Wall Controller</h2>
-      <p class="sub">Touch panel · Panlee (ESP32-S3) · <span class="ver" data-ver="wall-install.json">v…</span></p>
+      <p class="sub">Touch panel · Panlee WT32S3-86S (ESP32-S3) · <span class="ver" data-ver="wall-install.json">v…</span></p>
+      <p class="warn">
+        This board has <strong>no auto-reset</strong> over its USB-serial writer, so you must put it in
+        download mode <em>by hand before</em> clicking Install: hold the pin labelled
+        <code>EN</code> (the silkscreen is swapped — it's really GPIO0) to GND, tap the
+        red <code>RESET</code> button, then release. Once it shows
+        “waiting for download”, click Install. If the browser can't sync, the CLI path
+        (<code>esptool --before no-reset --after no-reset</code>) is the reliable fallback.
+      </p>
       <esp-web-install-button manifest="wall-install.json">
         <button slot="activate">Install Wall Controller</button>
         <span slot="unsupported">Web Serial isn't supported here — use Chrome, Edge, or Opera on desktop.</span>
@@ -72,9 +84,8 @@
     </div>
 
     <p class="note">
-      Desktop Chromium browsers only (Web Serial). If the device isn't detected,
-      hold its <code>BOOT</code> button while connecting. Wireless updates after
-      the first flash are handled by each device's own update channel.
+      Desktop Chromium browsers only (Web Serial). Wireless updates after the
+      first flash are handled by each device's own update channel.
     </p>
   </main>
 
