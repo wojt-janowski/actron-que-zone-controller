@@ -42,7 +42,11 @@
       color: #d8c08a; background: #221d10; border: 1px solid #3a311a;
       border-radius: 9px; padding: 12px 14px; font-size: 13px; margin: 0 0 16px;
     }
-    .note code, .warn code { background: #0a0d11; padding: 1px 6px; border-radius: 5px; }
+    .info {
+      color: #bfe3d4; background: #112019; border: 1px solid #1d3a2e;
+      border-radius: 9px; padding: 12px 14px; font-size: 13px; margin: 14px 0 0;
+    }
+    .note code, .warn code, .info code { background: #0a0d11; padding: 1px 6px; border-radius: 5px; }
     a { color: var(--accent); }
   </style>
 </head>
@@ -63,6 +67,17 @@
         <span slot="unsupported">Web Serial isn't supported here — use Chrome, Edge, or Opera on desktop.</span>
         <span slot="not-allowed">This page must be served over HTTPS to flash.</span>
       </esp-web-install-button>
+      <p class="info">
+        <strong>First-time Wi-Fi setup.</strong> After flashing, the bridge has no
+        saved network, so it raises a temporary setup hotspot named
+        <code>Actron Controller Setup</code> (password <code>actron-setup</code>).
+        Join it from a phone or laptop and the captive page that pops up lets you
+        choose your home Wi-Fi and enter its password (stored on the device). It
+        then joins your network over DHCP — reach it at
+        <code>actron-controller.local</code>. To move it to a different network
+        later, use the <em>Forget Wi-Fi</em> button on the device dashboard to
+        return to this setup hotspot.
+      </p>
     </div>
 
     <div class="card">
