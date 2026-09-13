@@ -1,12 +1,15 @@
 {
   "name": "Actron Que Bridge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "new_install_prompt_erase": false,
   "builds": [
     {
       "chipFamily": "ESP32",
       "parts": [
-        { "path": "firmware/bridge-factory.bin", "offset": 0 }
+        {
+          "path": "firmware/bridge-factory.bin",
+          "offset": 0
+        }
       ]
     }
   ]
