@@ -1,16 +1,11 @@
 {
   "name": "Actron Que Wall Controller",
-  "version": "0.22.3",
+  "version": "0.23.0",
   "new_install_prompt_erase": false,
   "builds": [
     {
       "chipFamily": "ESP32-S3",
-      "parts": [
-        {
-          "path": "firmware/wall-factory.bin",
-          "offset": 0
-        }
-      ]
+      "parts": [ { "path": "firmware/wall-factory.bin", "offset": 0 } ]
     }
   ]
 }
