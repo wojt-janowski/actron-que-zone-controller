@@ -1,10 +1,10 @@
 {
   "name": "wojt-janowski.actron-que-bridge",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "builds": [
     {
       "chipFamily": "ESP32",
-      "ota": { "md5": "f2f09fb7645a31f351440d0b3525e27d", "path": "https://github.com/wojt-janowski/actron-que-zone-controller/releases/download/bridge-v0.1.12/actron-bridge-0.1.12.ota.bin" }
+      "ota": { "md5": "e728389b8e494560e9106b1767acd813", "path": "https://github.com/wojt-janowski/actron-que-zone-controller/releases/download/bridge-v0.1.13/actron-bridge-0.1.13.ota.bin" }
     }
   ]
 }
