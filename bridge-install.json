@@ -1,6 +1,6 @@
 {
   "name": "Actron Que Bridge",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "new_install_prompt_erase": false,
   "builds": [
     {
